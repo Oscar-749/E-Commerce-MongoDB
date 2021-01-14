@@ -2,6 +2,7 @@ import './App.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from './components/header/header';
 import Home from './containers/home/home';
@@ -23,7 +24,7 @@ function App() {
     
     <BrowserRouter>
       <Header user ={user} setUser={setUser}/>
-
+      
       <Switch>
         <Route path="/" component={Home} exact/>
         <Route path="/register" component={Register} exact/>

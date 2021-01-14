@@ -10,20 +10,17 @@ const Header = (props) => {
 
     return(
         <header className="header">
-            <NavLink to="/"> CarWeb</NavLink>
+            <NavLink to="/">CarWeb</NavLink>
 
             <div className="user">
             <div className="user">
                 {props.user ?
                     <>
-                        {/* <NavLink to=""></NavLink> */}
                         <span>{props.user?.name}</span>
                         <span onClick={logout}>Cerrar Sesión</span>
-                         
                     </> :
                     <>
-                        <NavLink to="/login">Iniciar Sesión</NavLink>
-                        <NavLink to="/register">Registrase</NavLink>
+                    
                     </>
                 }
             </div>
