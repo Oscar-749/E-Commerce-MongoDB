@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {useEffect, useState} from 'react';
+
+import Header from './components/header/header';
+import Home from './containers/home/home';
+import Register from './containers/register/register';
+import Login from './containers/login/login';
 
 function App() {
+  const [user, setUser] = useState(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> y guarde para cargar.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <BrowserRouter>
+      <Header/>
+      <Switch>
+        <Route path="/" component={Home} exact/>
+        <Route path="/register" component={Register} exact/>
+        <Route path="/login" children={<Login user={user} setUser={setUser}/>} exact/>
+      </Switch>
+    </BrowserRouter>
+
   );
 }
 
