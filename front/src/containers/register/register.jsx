@@ -18,11 +18,11 @@ const Register = () => {
                 password: form.password.value,
             }
             await axios.post('http://localhost:3000/users/register', user)
-            notification.success({message:'Usuario registrado correctamente'})
+            //notification.success({message:'Usuario registrado correctamente'})
             history.push('/login')
         }catch(error){
             console.log(error)
-            notification.error({message: 'Error al registrarte'})
+            //notification.error({message: 'Error al registrarte'})
         }
     }
 
