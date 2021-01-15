@@ -2,20 +2,20 @@ import React from 'react';
 import './home.css';
 import {NavLink} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import img from '../img/bandera.jpg';
 
-const Home = () => {
+const Home = (props) => {
     return(
-        <div>
-            <img src={img} width="500" height="300" alt="img-bandera"></img>
-            <h1>Bienvenido a CarWeb</h1>
-            
-            <div className="">
-                <NavLink to="/login">Iniciar Sesión</NavLink>
-                <NavLink to="/register">Registrarse</NavLink>
+        <header className="sub_header">
+            <div>
+                <NavLink to="/cars">COCHES</NavLink>
             </div>
-            
-        </div>
+            <div>
+                <NavLink to="/pieces">PIEZAS</NavLink>
+            </div>
+            <div>
+             <NavLink to="/garage">GARAGE</NavLink>
+            </div>
+        </header>
     )
 }
 

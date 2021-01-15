@@ -16,7 +16,7 @@ const Login = (props) => {
             localStorage.setItem('token', res.data.token)
             //notification.success({message: 'Has iniciado sesion correctamente'})
             props.setUser(res.data.user)
-            history.push('/')
+            history.push('/home')
         }catch(error){
             console.log(error)
             //notification.error({message:'Error al iniciar sesion'})
