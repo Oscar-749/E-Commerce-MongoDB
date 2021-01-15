@@ -1,0 +1,26 @@
+.sub_header {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(23, 45, 172);
+}
+
+.active {
+    background-color: rgb(233, 61, 61);
+}
+
+.sub_header a,
+.sub_header span {
+    all: unset;
+    color: rgb(255, 255, 255);
+    padding: 1em;
+    transition: all 0.5s;
+}
+
+.sub_header a:hover,
+.sub_header span:hover {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    background-color: rgb(43, 103, 182);
+}

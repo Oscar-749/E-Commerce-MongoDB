@@ -28,14 +28,14 @@ const Register = () => {
 
     return(
         <form className="register" onSubmit= {handleSubmit}>
-        <h1>Registrarse</h1>
-            <input type = "text" name= "name" placeholder="Introduce tu nombre"/>
-            <input type = "text" name= "surname" placeholder="Introduce tu apellido"/>
-            <input type = "text" name= "username" placeholder="Introduce tu nick"/>
-            <input type = "email" name= "email" placeholder="Introduce tu email"/>
-            <input type = "password" name= "password" placeholder="Introduce tu contraseña"/>
+        <h1>Registro</h1>
+            <input type = "text" class="form-control" name= "name" placeholder="Nombre"/>
+            <input type = "text" class="form-control" name= "surname" placeholder="Apellido"/>
+            <input type = "text" class="form-control" name= "username" placeholder="Nick"/>
+            <input type = "email" class="form-control" name= "email" placeholder="Email"/>
+            <input type = "password" class="form-control" name= "password" placeholder="Contraseña"/>
 
-            <button type="submit">Registrarme</button>
+            <button type="submit" class="btn btn-primary">Registrarme</button>
         </form>
     )
 }

@@ -26,9 +26,9 @@ const Login = (props) => {
     return(
         <form className="login" onSubmit={handleSubmit}>
         <h1>Iniciar Sesión</h1>
-            <input type="email" onChange={event=>setEmail(event.target.value)} name="email" placeholder="Introduce tu email"/>
-            <input type="password" onChange={event=>setPassword(event.target.value)} name="password" placeholder="Introduce tu contraseña"/>
-            <button type="submit">Iniciar Sesión</button>
+            <input type="email" class="form-control" onChange={event=>setEmail(event.target.value)} name="email" placeholder="Email"/>
+            <input type="password" class="form-control" onChange={event=>setPassword(event.target.value)} name="password" placeholder="Contraseña"/>
+            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
         </form>
     )
 }

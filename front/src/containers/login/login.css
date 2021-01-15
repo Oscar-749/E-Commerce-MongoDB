@@ -3,7 +3,7 @@ form.login {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    min-height: 70vh;
+    min-height: 60vh;
     align-items: center;
 }
 
@@ -13,10 +13,9 @@ form.login {
     padding-top: 1px;
     width: fit-content;
     border-radius: 1em;
-    background-color: rgb(189, 57, 57);
     text-align: center;
 }
-
+/*
 .login button{
     all: unset;
     cursor: pointer;
@@ -24,4 +23,4 @@ form.login {
     padding: 0.6em;
     background-color: rgb(189, 57, 57);
     text-align: center;
-} 
+}  */
