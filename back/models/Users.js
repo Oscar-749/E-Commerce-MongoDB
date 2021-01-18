@@ -1,7 +1,7 @@
-const {Schema, model} = require('mongoose');
+const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
-const UserSchema = new Schema({
+const UserSchema = new mongoose.Schema({
     name: String,
     surname: String,
     username: String,
@@ -14,7 +14,8 @@ const UserSchema = new Schema({
         type: String,
         required: true,
         minlength: 6    
-}
+    },
+    createdAt: {type: Date, default: new Date()}
 
 },{
     toJSON:{
@@ -36,7 +37,7 @@ UserSchema.pre('save', async function(next){
     }
 })
 
-module.exports = model('User', UserSchema);
+module.exports = mongoose.model('User', UserSchema);
 
 // UserSchema.virtual('productos').get(function(){
 //     const user = this;

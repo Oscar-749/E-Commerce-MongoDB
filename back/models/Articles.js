@@ -1,6 +1,7 @@
-const {Schema, model} = require('mongoose');
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const ArticleSchema = new Schema({
+const ArticleSchema = new mongoose.Schema({
     user: { type: Schema.Types.ObjectId, ref: 'User' },
     name: String,
     img:String,
@@ -9,4 +10,4 @@ const ArticleSchema = new Schema({
     createdAt: {type: Date, default: new Date()}
 })
 
-module.exports = model('Articles', ArticleSchema);
+module.exports = mongoose.model('Articles', ArticleSchema);
