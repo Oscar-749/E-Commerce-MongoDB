@@ -8,6 +8,7 @@ import Portada from './containers/portada/portada';
 import Home from './containers/home/home';
 import Register from './containers/register/register';
 import Login from './containers/login/login';
+import Profile from './containers/profile/profile';
 import Cars from './subContainers/cars/cars';
 import Pieces from './subContainers/pieces/pieces';
 import Garage from './subContainers/garage/garage';
@@ -31,6 +32,7 @@ function App() {
       <Switch>
         <Route path="/" component={Portada} exact/>
         <Route path="/register" component={Register} exact/>
+        <Route path="/profile" component={Profile} exact/>
         <Route path="/login" children={<Login user={user} setUser={setUser}/>} exact/>
         <Route path="/home" component={Home} exact/>
         <Route path="/cars" component={Cars} exact/>

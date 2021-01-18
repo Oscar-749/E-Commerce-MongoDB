@@ -1,7 +1,7 @@
-const mongoose = require('mongoose');
+const {Schema, model} = require('mongoose');
 const bcrypt = require('bcryptjs');
 
-const UserSchema = new mongoose.Schema({
+const UserSchema = new Schema({
     name: String,
     surname: String,
     username: String,
@@ -25,14 +25,7 @@ const UserSchema = new mongoose.Schema({
         virtual: true
     }
 });
-// UserSchema.virtual('productos').get(function(){
-//     const user = this;
-//     return{
-//         sold_items:
-//         sale_items:
-//         favorites:
-//     }
-// })
+
 UserSchema.pre('save', async function(next){
     try{
         const user = this;
@@ -43,6 +36,14 @@ UserSchema.pre('save', async function(next){
     }
 })
 
-const User = mongoose.model('User', UserSchema);
+module.exports = model('User', UserSchema);
 
-module.exports = User;
+// UserSchema.virtual('productos').get(function(){
+//     const user = this;
+//     return{
+//         sold_items:
+//         sale_items:
+//         favorites:
+//     }
+// })
+//const User = model('User', UserSchema);

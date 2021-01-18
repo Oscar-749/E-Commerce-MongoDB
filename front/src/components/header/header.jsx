@@ -17,6 +17,7 @@ const Header = (props) => {
                     {props.user ?
                         <>
                         <span>{props.user?.username}</span>
+                        <NavLink to="/profile">Perfil</NavLink>
                         <NavLink to="/">
                             <span onClick={logout}>Cerrar Sesión</span>
                         </NavLink>
