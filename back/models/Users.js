@@ -15,8 +15,12 @@ const UserSchema = new mongoose.Schema({
         required: true,
         minlength: 6    
     },
-    createdAt: {type: Date, default: new Date()}
-
+    articles:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'Articles'
+        }
+    ]
 },{
     toJSON:{
         transform: function(doc, ret){
@@ -30,7 +34,7 @@ const UserSchema = new mongoose.Schema({
 UserSchema.pre('save', async function(next){
     try{
         const user = this;
-        user.password = await bcrypt.hash(user.password, 9);
+        user.password = await bcrypt.hash(user.password, 5);
         next()
     }catch(error){
         console.log(error)
@@ -40,11 +44,11 @@ UserSchema.pre('save', async function(next){
 module.exports = mongoose.model('User', UserSchema);
 
 // UserSchema.virtual('productos').get(function(){
-//     const user = this;
-//     return{
-//         sold_items:
-//         sale_items:
-//         favorites:
-//     }
-// })
-//const User = model('User', UserSchema);
+//      const user = this;
+//      return{
+//          sold_items:
+//          sale_items:
+//          favorites:
+//      }
+//  })
+// const User = model('User', UserSchema);
