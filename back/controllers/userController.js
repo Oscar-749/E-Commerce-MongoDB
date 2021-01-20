@@ -21,13 +21,14 @@ const UserController = {
     async login(req, res){
         try{
             const user = await User.findOne({email:req.body.email});
-            console.log('Soy req.body',req.body);
             if(!user){
                 return res.status(400).send({message:'Correo o contraseña incorrectas'});
             }
             console.log(user);
-            const isMatch = await bcrypt.compare(req.body.password, user.password);
-            console.log('Soy isMatch',isMatch);
+            
+            const hash = await bcrypt.hash(req.body.password, 6);
+            
+            const isMatch = bcrypt.compareSync(req.body.password, user.password);
 
             if(!isMatch){
                 return res.status(400).send({message:'Credenciales incorrectas'});
