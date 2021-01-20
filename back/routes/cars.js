@@ -1,6 +1,6 @@
 const express = require('express');
-const CarsController = require('../controllers/carsController');
 const router = express.Router();
+const CarsController = require('../controllers/carsController');
 
 router.post('/new', CarsController.newArticles);
 router.get('/getcars', CarsController.getCars);

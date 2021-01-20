@@ -3,7 +3,6 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const UserController = {
-    //====REGISTRO====//
     async register(req, res){
         try{
             console.log(JSON.stringify(req.body));
@@ -17,7 +16,6 @@ const UserController = {
         }
     },
 
-    //====LOGIN====//
     async login(req, res){
         try{
             const user = await User.findOne({email:req.body.email});
@@ -42,7 +40,6 @@ const UserController = {
         }
     },
 
-    //====BUSCAR USERS====//
     async getAll(req, res){
         try{
             const users = await User.find();
@@ -53,7 +50,6 @@ const UserController = {
         }
     },
 
-    //====BUSCAR POR EMAIL====//
     async getByEmail(req, res){
         try{
             const user = await User.findOne({email:req.params.email});
@@ -67,7 +63,6 @@ const UserController = {
         }
     },
 
-    //====MODIFICAR USERS====//
     async update(req, res){
         try{
             const user = await User.findByIdAndUpdate(req.params.id, req.body, {
@@ -80,7 +75,6 @@ const UserController = {
         }
     },
 
-    //====BORRAR USERS====//
     async delete(req, res){
         try{
             const user = await User.findByIdAndDelete(req.params.id);

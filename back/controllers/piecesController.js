@@ -4,10 +4,10 @@ const PiecesController = {
     async newPiece(req, res){
         try{
             const piece = await Piece.create(req.body);
-            res.send({piece, message:'Articulo subido correctamente'});
+            res.send({piece, message:'Pieza subido correctamente'});
         }catch(error){
             console.error(error);
-            res.status(500).send({message: 'Ha habido algun error al subir el articulo'})
+            res.status(500).send({message: 'Ha habido algun error al subir la pieza'})
         }
     },
 
@@ -17,7 +17,7 @@ const PiecesController = {
             res.send(pieces);
         }catch(error){
             console.error(error);
-            res.status(500).send({message: 'Hay algún problema al sacar todos los usuarios'})
+            res.status(500).send({message: 'Hay algún problema al sacar todas las piezas'})
         }
     },
 
@@ -26,10 +26,10 @@ const PiecesController = {
             const piece = await Piece.findByIdAndUpdate(req.params.id, req.body,{
                 new: true,
             });
-            res.send({piece, message:'Artículo modificado corectamente'})
+            res.send({piece,message:'Artículo modificado correctamente'})
         }catch(error){
             console.error(error);
-            res.status(500).send({message: 'Hay algún problema al modificar la informacion del articulo'})
+            res.status(500).send({message: 'Hay algún problema al modificar la información del artículo'})
         }
     },
 
