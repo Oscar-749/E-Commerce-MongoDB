@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const ArticleSchema = new mongoose.Schema({
+const PiecesSchema = new mongoose.Schema({
     name: String,
     img:String,
     price:String,
@@ -8,4 +8,4 @@ const ArticleSchema = new mongoose.Schema({
     createdAt: {type: Date, default: new Date()}
 })
 
-module.exports = mongoose.model('Articles',ArticleSchema);
+module.exports = mongoose.model('Pieces', PiecesSchema);
