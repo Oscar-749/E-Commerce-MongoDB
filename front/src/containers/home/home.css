@@ -26,6 +26,8 @@
     padding: 2.6em;
     text-decoration: none;
     background-color: #ffffff73;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 .coches:hover {
@@ -47,6 +49,8 @@
     padding: 2.6em;
     text-decoration: none;
     background-color: #ffffff73;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 .piezas:hover {
@@ -68,6 +72,8 @@
     padding: 2.6em;
     text-decoration: none;
     background-color: #ffffff73;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 .garaje:hover {
