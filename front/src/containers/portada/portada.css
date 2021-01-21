@@ -1,3 +1,18 @@
-* {
+.img-portada {
     background-image: 'home.jpg';
+    text-align: center;
+    margin: 2em;
+}
+
+.title {
+    text-align: center;
+    margin: 0.7em;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.btn-form {
+    text-align: center;
+    justify-content: space-between;
 }

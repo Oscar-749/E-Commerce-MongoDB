@@ -7,14 +7,17 @@ import img from '../img/bandera.jpg';
 const Portada = () => {
     return(
         <div>
-            <img src={img} width="500" height="300" alt="img-bandera"></img>
-            <h1>Bienvenido a CarWeb</h1>
-            
-            <div className="">
+            <div className="img-portada">
+                <img src={img} width="500" height="300" alt="img-bandera"></img>
+            </div>
+
+            <h1 className="title">Bienvenido a CarWeb</h1>
+
+            <div className="btn-form">
                 <NavLink className="btn btn-primary" to="/login">Iniciar Sesión</NavLink>
+                
                 <NavLink className="btn btn-primary" to="/register">Registrarse</NavLink>
             </div>
-            
         </div>
     )
 }
