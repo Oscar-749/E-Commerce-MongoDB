@@ -1,26 +1,79 @@
-.sub_header {
-    margin-top: 150px;
+.principal {
+    background-image: url(../img//circuito.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 3em;
+    height: 92vh;
+}
+
+.main {
+    width: 95%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(23, 45, 172);
+    justify-content: space-around;
+    margin: 9em auto;
+    padding: 5px;
 }
 
-.active {
-    background-color: rgb(233, 61, 61);
+.coches {
+    border: 3px solid #11269e;
+    text-align: center;
+    width: 20%;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    color: #192c99;
+    height: 130px;
+    padding: 2.6em;
+    text-decoration: none;
+    background-color: #ffffff73;
 }
 
-.sub_header a,
-.sub_header span {
-    all: unset;
-    color: rgb(255, 255, 255);
-    padding: 1em;
-    transition: all 0.5s;
-}
-
-.sub_header a:hover,
-.sub_header span:hover {
-    color: rgb(255, 255, 255);
+.coches:hover {
+    background-color: #0f2186d2;
     cursor: pointer;
-    background-color: rgb(43, 103, 182);
+    transition: 0.5s all ease;
+    color: #f9f1f1;
+    text-decoration: none;
+}
+
+.piezas {
+    border: 3px solid #11269e;
+    text-align: center;
+    width: 20%;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    color: #192c99;
+    height: 130px;
+    padding: 2.6em;
+    text-decoration: none;
+    background-color: #ffffff73;
+}
+
+.piezas:hover {
+    background-color: #0f2186d2;
+    cursor: pointer;
+    transition: 0.5s all ease;
+    color: #f9f1f1;
+    text-decoration: none;
+}
+
+.garaje {
+    border: 3px solid #11269e;
+    text-align: center;
+    width: 20%;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    color: #192c99;
+    height: 130px;
+    padding: 2.6em;
+    text-decoration: none;
+    background-color: #ffffff73;
+}
+
+.garaje:hover {
+    background-color: #0f2186d2;
+    cursor: pointer;
+    transition: 0.5s all ease;
+    color: #f9f1f1;
+    text-decoration: none;
 }

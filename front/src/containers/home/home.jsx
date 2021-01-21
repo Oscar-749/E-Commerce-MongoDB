@@ -5,17 +5,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Home = (props) => {
     return(
-        <header className="sub_header">
-            <div>
-                <NavLink to="/cars">COCHES</NavLink>
+        <div>
+            <div className="principal">
+            <h1 className="titulo_home"></h1>
+                <div className="main">                 
+                    <NavLink to="/cars" className="coches">
+                        <h2>Coches</h2>
+                    </NavLink>
+                    
+                    <NavLink to="/pieces" className="piezas">
+                        <h2>Piezas</h2>
+                    </NavLink>
+                         
+                    <NavLink to="/garage" className="garaje">
+                        <h2>Garaje</h2>
+                    </NavLink>
+                </div>
             </div>
-            <div>
-                <NavLink to="/pieces">PIEZAS</NavLink>
-            </div>
-            <div>
-             <NavLink to="/garage">GARAGE</NavLink>
-            </div>
-        </header>
+        </div>
     )
 }
 
