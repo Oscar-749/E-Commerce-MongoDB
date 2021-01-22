@@ -3,7 +3,6 @@ import './login.css';
 import {useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
-import {notification} from 'antd';
 
 const Login = (props) => {
     const [email, setEmail] = useState('')
@@ -14,12 +13,10 @@ const Login = (props) => {
             event.preventDefault();
             const res = await axios.post('http://localhost:3000/users/login', {email, password})
             localStorage.setItem('token', res.data.token)
-            //notification.success({message: 'Has iniciado sesion correctamente'})
             props.setUser(res.data.user)
             history.push('/home')
         }catch(error){
             console.log(error)
-            //notification.error({message:'Error al iniciar sesion'})
         }
         
     }

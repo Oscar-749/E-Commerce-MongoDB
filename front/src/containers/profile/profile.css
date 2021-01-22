@@ -1,0 +1,10 @@
+* {
+}
+
+.profile {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 24em;
+    text-align:  center;
+    width: 50em;
+    padding: 2em;
+}

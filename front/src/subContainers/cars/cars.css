@@ -1,0 +1,138 @@
+.main-carta {
+    margin-top: 3em;
+}
+
+.galeria-coches {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.img-gal {
+    box-shadow: 0 0.375rem 1.0625rem 0 rgba(0, 0, 0, 0.555);
+    background-color: #fff;
+    margin: 5px;
+    width: 300px;
+    height: 440px;
+    text-align: center;
+    overflow: hidden;
+    transition: all .4s ease;
+}
+
+.img-gal:hover {
+    transform:scale(1.1);
+}
+
+.title-cars {
+    margin-top: 11em;
+}
+
+
+/***DISEÑO DE LOS ARTICULOS***/
+#car-uno {
+    background-image: url(./img/subaru.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#car-dos {
+    background-image: url(./img/seat.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#car-tres {
+    background-image: url(./img/ford.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#car-cuatro {
+    background-image: url(./img/toyota.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#car-cinco {
+    background-image: url(./img/bmw.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#car-seis {
+    background-image: url(./img/citroen.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#car-siete {
+    background-image: url(./img/golf.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#car-ocho {
+    background-image: url(./img/honda.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#car-nueve {
+    background-image: url(./img/kia.jpeg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#car-diez {
+    background-image: url(./img/kuga.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#car-once {
+    background-image: url(./img/navara.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#car-doce {
+    background-image: url(./img/nissan.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#car-trece {
+    background-image: url(./img/porche.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#car-catorce {
+    background-image: url(./img/range.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#car-quince {
+    background-image: url(./img/zafira.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}

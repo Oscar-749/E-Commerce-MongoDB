@@ -29,11 +29,15 @@ const Profile = () => {
        <form className="profile" onSubmit= {handleSubmit}>
         <h1>Perfil</h1>
             <input type = "text" class="form-control" name= "name" placeholder="Nombre"/>
+            <br></br>
             <input type = "text" class="form-control" name= "surname" placeholder="Apellido"/>
+            <br></br>
             <input type = "text" class="form-control" name= "username" placeholder="Nombre usuario"/>
+            <br></br>
             <input type = "email" class="form-control" name= "email" placeholder="Correo electrónico"/>
+            <br></br>
             <input type = "password" class="form-control" name= "password" placeholder="Contraseña"/>
-
+            <br></br>
             <button type="submit" class="btn btn-primary">Guardar</button>
             <button type="submit" class="btn btn-primary">Eliminar cuenta</button>
         </form>

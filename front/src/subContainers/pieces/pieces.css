@@ -1,0 +1,138 @@
+.main-piezas {
+    margin-top: 3em;
+}
+
+.galeria-piezas {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.img-piezas {
+    box-shadow: 0 0.375rem 1.0625rem 0 rgba(0, 0, 0, .1);
+    background-color: #fff;
+    margin: 5px;
+    width: 300px;
+    height: 440px;
+    text-align: center;
+    overflow: hidden;
+    transition: all .4s ease;
+}
+
+.img-piezas:hover {
+    transform: scale(1.1);
+}
+
+.title-articles {
+    margin-top: 12.9em;
+}
+
+
+/***DISEÑO DE LOS ARTICULOS***/
+#pieza-uno {
+    background-image: url(./img/aleron.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#pieza-dos {
+    background-image: url(./img/bbs.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#pieza-tres {
+    background-image: url(./img/bbs2.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#pieza-cuatro {
+    background-image: url(./img/capo.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#pieza-cinco {
+    background-image: url(./img/faros-bmw.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#pieza-seis {
+    background-image: url(./img/muelles.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#pieza-siete {
+    background-image: url(./img/oz1.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#pieza-ocho {
+    background-image: url(./img/oz2.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#pieza-nueve {
+    background-image: url(./img/oz3.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#pieza-diez {
+    background-image: url(./img/pomo.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#pieza-once {
+    background-image: url(./img/pomo2.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#pieza-doce {
+    background-image: url(./img/suspension.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#pieza-trece {
+    background-image: url(./img/suspension2.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#pieza-catorce {
+    background-image: url(./img/volante.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+#pieza-quince {
+    background-image: url(./img/volante2.jpg);
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
