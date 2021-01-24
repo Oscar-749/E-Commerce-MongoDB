@@ -1,6 +1,6 @@
 import React from 'react';
 import './cars.css';
-//import {NavLink} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Cars = () => {
@@ -11,110 +11,124 @@ const Cars = () => {
                 <div className="galeria-coches">
 
                     <div id="car-uno" className="img-gal">
-                        <h5 className="title-cars">Subaru Impreza WRX STI</h5>
-                        <p>Subaru Impreza de 2006 con tubo de escape akrapovic, llantas oz suspension roscada</p>
+                        <h5 className="title-cars">Subaru Impreza wrx sti</h5>
+                        <br></br>
+                        <p>Valencia | Gasolina | 2006 | 31.000 km</p>
                         <p>19.000€</p>
-                        <button className="btn btn-primary">Comprar</button>
+                        <NavLink className="btn btn-primary" to="/detailscars">Detalles</NavLink>
                     </div>
 
                     <div id="car-dos" className="img-gal">
                         <h5 className="title-cars">Seat Leon Cupra</h5>
-                        <p>Seat Leon de 300CV con todos los extras, asientos semibackets, llantas 17" con 42.000Km</p>
-                        <p>25.400€</p>
-                        <button className="btn btn-primary">Comprar</button>
+                        <br></br>
+                        <p>Tarragona | Gasolina | 2016 | 27.000 km</p>
+                        <p>25.000€</p>
+                        <NavLink className="btn btn-primary" to="/detailscars">Detalles</NavLink>
                     </div>
 
                     <div id="car-tres" className="img-gal">
                         <h5 className="title-cars">Ford Focus RS</h5>
-                        <p>Ford Focus Rs de 2017 con 350CV, tracción total, discos brembo y aleron regulable</p>
+                        <br></br>
+                        <p>Valencia | Gasolina | 2017 | 42.000 km</p>
                         <p>32.000€</p>
-                        <button className="btn btn-primary">Comprar</button>
+                        <NavLink className="btn btn-primary" to="/detailscars">Detalles</NavLink>
                     </div>
 
                     <div id="car-cuatro" className="img-gal">
                         <h5 className="title-cars">Toyota GR Yaris</h5>
-                        <p>Toyota Gr Yaris con traccion total y 5.000Km</p>
-                        <p>34.000€</p>
-                        <button className="btn btn-primary">Comprar</button>
+                        <br></br>
+                        <p>Madrid | Gasolina | 2021 | 680 km</p>
+                        <p>19.000€</p>
+                        <NavLink className="btn btn-primary" to="/detailscars">Detalles</NavLink>
                     </div>
 
                     <div id="car-cinco" className="img-gal">
                         <h5 className="title-cars">BMW X5</h5>
-                        <p>BMW x5 de 2012 con 250CV y 150.000Km, con llantas de aluminio</p>
-                        <p>5.600€</p>
-                        <button className="btn btn-primary">Comprar</button>
+                        <br></br>
+                        <p>Barcelona | Diesel | 2013 | 136.000 km</p>
+                        <p>19.000€</p>
+                        <NavLink className="btn btn-primary" to="/detailscars">Detalles</NavLink>
                     </div>
 
                     <div id="car-seis" className="img-gal">
                         <h5 className="title-cars">Citroen C4</h5>
-                        <p>Citroen C4 de 2005 con 130CV y 240.000Km</p>
-                        <p>2.100€</p>
-                        <button className="btn btn-primary">Comprar</button>
+                        <br></br>
+                        <p>Castellon | Gasolina | 2010 | 47.000 km</p>
+                        <p>6.000€</p>
+                        <NavLink className="btn btn-primary" to="/detailscars">Detalles</NavLink>
                     </div>
 
                     <div id="car-siete" className="img-gal">
-                        <h5 className="title-cars">Golf 5R</h5>
-                        <p>Golf mk5 con 210CV y 150.000Km con todos los extras de ayuda a la conducción</p>
-                        <p>4.600€</p>
-                        <button className="btn btn-primary">Comprar</button>
+                        <h5 className="title-cars">Golf mk5</h5>
+                        <br></br>
+                        <p>Madrid | Gasolina | 2014 | 68.000 km</p>
+                        <p>13.000€</p>
+                        <NavLink className="btn btn-primary" to="/detailscars">Detalles</NavLink>
                     </div>
 
                     <div id="car-ocho" className="img-gal">
                         <h5 className="title-cars">Honda Accord</h5>
-                        <p>Honda Accord del 2013 con 150CV y 240.000Km</p>
-                        <p>1.900€</p>
-                        <button className="btn btn-primary">Comprar</button>
+                        <br></br>
+                        <p>Sevilla | Gasolina | 2009 | 160.000 km</p>
+                        <p>3.000€</p>
+                        <NavLink className="btn btn-primary" to="/detailscars">Detalles</NavLink>
                     </div>
 
                     <div id="car-nueve" className="img-gal">
                         <h5 className="title-cars">KIA Sportage</h5>
-                        <p>Kia del 2017 con 170CV con llantas de aluminio 15"</p>
-                        <p>22.000€</p>
-                        <button className="btn btn-primary">Comprar</button>
+                        <br></br>
+                        <p>Tarragona | Gasolina | 2017 | 22.000 km</p>
+                        <p>24.000€</p>
+                        <NavLink className="btn btn-primary" to="/detailscars">Detalles</NavLink>
                     </div>
 
                     <div id="car-diez" className="img-gal">
                         <h5 className="title-cars">Ford Kuga</h5>
-                        <p>Kuga 2.3TDI de 160CV con 120.000Km con la ITV pasada recientemente</p>
-                        <p>12.200€</p>
-                        <button className="btn btn-primary">Comprar</button>
+                        <br></br>
+                        <p>Valencia | Gasolina | 2016 | 46.000 km</p>
+                        <p>17.500€</p>
+                        <NavLink className="btn btn-primary" to="/detailscars">Detalles</NavLink>
                     </div>
 
                     <div id="car-once" className="img-gal">
                         <h5 className="title-cars">Nissan Navara</h5>
-                        <p>Nissan 2.8TDI 4X4 de 190CV con 96.000Km</p>
-                        <p>14.200€</p>
-                        <button className="btn btn-primary">Comprar</button>
+                        <br></br>
+                        <p>Galicia | Diesel | 2016 | 53.000 km</p>
+                        <p>24.000€</p>
+                        <NavLink className="btn btn-primary" to="/detailscars">Detalles</NavLink>
                     </div>
 
                     <div id="car-doce" className="img-gal">
                         <h5 className="title-cars">Nissan Qashqai</h5>
-                        <p>dfertyhth otirj hg tr khj oirtghjw rt ghjoritf ghjo rtghj ortgh wrt hgj</p>
-                        <p>16.300€</p>
-                        <button className="btn btn-primary">Comprar</button>
+                        <br></br>
+                        <p>Barcelona | Gasolina | 2016 | 74.000 km</p>
+                        <p>19.000€</p>
+                        <NavLink className="btn btn-primary" to="/detailscars">Detalles</NavLink>
                     </div>
 
                     <div id="car-trece" className="img-gal">
                         <h5 className="title-cars">Porche 911</h5>
-                        <p>rthjo rhi oh tj iorj hi pjth sdfgsdfg sdopjt roh jopr hpo irhj potj hopjr phjp orjhoprt</p>
-                        <p>45.000€</p>
-                        <button className="btn btn-primary">Comprar</button>
+                        <br></br>
+                        <p>Madrid | Gasolina | 2017 | 16.000 km</p>
+                        <p>62.000€</p>
+                        <NavLink className="btn btn-primary" to="/detailscars">Detalles</NavLink>
                     </div>
 
                     <div id="car-catorce" className="img-gal">
                         <h5 className="title-cars">Range Rover Explorer</h5>
-                        <p>kghiur hgi or hjopho pjropj hp ohop ehopjopr gjhoprt kjoprhjpgroh jpro fghjp foñ</p>
-                        <p>28.800€</p>
-                        <button className="btn btn-primary">Comprar</button>
+                        <br></br>
+                        <p>Madrid | Diesel | 2015 | 81.000 km</p>
+                        <p>42.000€</p>
+                        <NavLink className="btn btn-primary" to="/detailscars">Detalles</NavLink>
                     </div>
 
                     <div id="car-quince" className="img-gal">
                         <h5 className="title-cars">Opel Zafira</h5>
-                        <p>thijorgh jprj h go p jr fkg jfk djhg poirj hgpioog hpjropgjpor jhopgdfgd rjho gprjho pjro hjrp</p>
-                        <p>3.200€</p>
-                        <button className="btn btn-primary">Comprar</button>
+                        <br></br>
+                        <p>Murcia | Diesel | 2007 | 230.000 km</p>
+                        <p>3.700€</p>
+                        <NavLink className="btn btn-primary" to="/detailscars">Detalles</NavLink>
                     </div>
-
                 </div>
             </div>
         </div>

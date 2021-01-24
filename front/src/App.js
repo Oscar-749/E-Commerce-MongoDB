@@ -12,6 +12,8 @@ import Profile from './containers/profile/profile';
 import Cars from './subContainers/cars/cars';
 import Pieces from './subContainers/pieces/pieces';
 import Garage from './subContainers/garage/garage';
+import detailsCars from './subContainers/cars/detailsCars/detailsCars';
+import detailsPieces from './subContainers/pieces/detailsPieces/detailsPieces';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -38,9 +40,10 @@ function App() {
         <Route path="/cars" component={Cars} exact/>
         <Route path="/pieces" component={Pieces} exact/>
         <Route path="/garage" component={Garage} exact/>
+        <Route path="/detailscars" component={detailsCars} exact/>
+        <Route path="/detailspieces" component={detailsPieces} exact/>
       </Switch>
     </BrowserRouter>
-
   );
 }
 
