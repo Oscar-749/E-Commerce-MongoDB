@@ -87,10 +87,11 @@ const UserController = {
         }
     },
 
+    //===REGISTRO DE LAS COMPRAS Y VENTAS===//
     async Buy(req, res){
         try{
             const user = req.user;
-            const newBuy = {id_car, id_buyer: buy.id}
+            const newBuy = {id_product, id_buyer: user.id}
             const buy = await Buy.create(newBuy);
             res.send({buy,message:'Compra registrada correctamente'});
         }catch(error){
@@ -100,13 +101,15 @@ const UserController = {
     },
 
     async Sell(req, res){
-        // try{
-        //     const sell = await Sell.create(req.body);
-        //     res.send({sell,message:'Venta efectuada correctamente'});
-        // }catch(error){
-        //     console.error(error);
-        //     res.status(500).send({message: 'Hay algún problema al registrar la venta'})
-        // }
+        try{
+            const user = req.user;
+            const newSell = {id_product, id_seller: user.id}
+            const sell = await Sell.create(req.body);
+            res.send({sell,message:'Venta registrada correctamente'});
+        }catch(error){
+            console.error(error);
+            res.status(500).send({message: 'Hay algún problema al registrar la venta'})
+        }
     },
 }
 

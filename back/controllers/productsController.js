@@ -48,6 +48,14 @@ const CarsController = {
             console.error(error);
             res.status(500).send({message: 'Hay algún problema al borrar este artículo'})
         }
+    },
+
+    async getCars(req, res){
+
+    },
+
+    async getPieces(req, res){
+        
     }
 }
 
