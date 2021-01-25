@@ -3,7 +3,9 @@ const Piece = require('../models/Pieces');
 const PiecesController = {
     async newPiece(req, res){
         try{
-            const piece = await Piece.create(req.body);
+            const user = req.user;
+            const newPiece = {...req.body,id_user: user.id};
+            const piece = await Piece.create(newPiece);
             res.send({piece, message:'Pieza subido correctamente'});
         }catch(error){
             console.error(error);

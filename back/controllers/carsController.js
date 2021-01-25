@@ -3,7 +3,9 @@ const Car = require('../models/Cars');
 const CarsController = {
     async newArticles(req, res){
         try{
-            const car = await Car.create(req.body);
+            const user = req.user;
+            const newCar = {...req.body,id_user: user.id};
+            const car = await Car.create(newCar);
             res.send({car, message:'Artículo subido correctamente'});
         }catch(error){
             console.error(error);
@@ -23,9 +25,15 @@ const CarsController = {
 
     async updateCars(req, res){
         try{
-            const car = await Car.findByIdAndUpdate(req.params.id, req.body,{
-                new: true,
-            });
+            const car = await Car.findById(req.params.id);
+            if(car.id_user === req.user.id){
+                const car = await Car.findByIdAndUpdate(req.params.id, req.body,{
+                    new: true,
+                });
+            }else{
+                return res.send(403).send({message:'No eres el dueño'})            
+            }
+            
             res.send({car, message:'Artículo modificado correctamente'})
         }catch(error){
             console.error(error);

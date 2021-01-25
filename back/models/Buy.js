@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const BuySchema = new mongoose.Schema({
     id_buyer: String,
-    id_seller: String,
+    id_car: String,
     createdAt: {type: Date, default: new Date()}
 })
 
