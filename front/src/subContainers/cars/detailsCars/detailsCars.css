@@ -1,0 +1,31 @@
+.main-details-cars {
+    margin-top: 3em;
+}
+
+.coche {
+    text-align: center;
+}
+
+.especificaciones {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    width: 18%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.comentarios {
+    text-align: center;
+    margin: 50px;
+    list-style: none;
+}
+
+.caracteristicas {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    width: 17%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

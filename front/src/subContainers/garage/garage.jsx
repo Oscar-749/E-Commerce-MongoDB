@@ -6,9 +6,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Garage = () => {
     return(
         <div>
-            <h1>Introducir NavLink para compras y ventas</h1>
-            <h2>Articulos en venta</h2>
-            <h2>Articulos comprados</h2>
+            <div className="main-garage">
+                <div className="info">
+
+                </div>
+
+                <div className="en-venta">
+                    <h6>En Venta</h6>
+                </div>
+
+                <div className="comprados">
+                    <h6>Comprados</h6>
+                </div>
+            </div>
         </div>
     )
 }

@@ -16,12 +16,12 @@
 }
 
 .coches {
-    border: 3px solid #11269e;
+    border: 3px solid #ff0000;
     text-align: center;
     width: 20%;
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
-    color: #192c99;
+    color: #ff0000;
     height: 130px;
     padding: 2.6em;
     text-decoration: none;
@@ -31,7 +31,7 @@
 }
 
 .coches:hover {
-    background-color: #0f2186d2;
+    background-color: #ff0000;
     cursor: pointer;
     transition: 0.5s all ease;
     color: #f9f1f1;
@@ -39,12 +39,12 @@
 }
 
 .piezas {
-    border: 3px solid #11269e;
+    border: 3px solid #ff0000;
     text-align: center;
     width: 20%;
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
-    color: #192c99;
+    color: #ff0000;
     height: 130px;
     padding: 2.6em;
     text-decoration: none;
@@ -54,7 +54,7 @@
 }
 
 .piezas:hover {
-    background-color: #0f2186d2;
+    background-color: #ff0000;
     cursor: pointer;
     transition: 0.5s all ease;
     color: #f9f1f1;
@@ -62,12 +62,12 @@
 }
 
 .garaje {
-    border: 3px solid #11269e;
+    border: 3px solid #ff0000;
     text-align: center;
     width: 20%;
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
-    color: #192c99;
+    color: #ff0000;
     height: 130px;
     padding: 2.6em;
     text-decoration: none;
@@ -77,7 +77,7 @@
 }
 
 .garaje:hover {
-    background-color: #0f2186d2;
+    background-color: #ff0000;
     cursor: pointer;
     transition: 0.5s all ease;
     color: #f9f1f1;
