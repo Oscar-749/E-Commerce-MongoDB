@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const CarsController = require('../controllers/carsController');
+const CarsController = require('../controllers/productsController');
 const auth = require('../middleware/auth');
 
-router.post('/', auth, CarsController.newArticles);
-router.get('/', CarsController.getCars);
-router.put('/:id', auth, CarsController.updateCars);
-router.delete('/:id', auth, CarsController.deleteCars);
+router.post('/', auth, CarsController.newProducts);
+router.get('/', CarsController.getProducts);
+router.put('/:id', auth, CarsController.updateProducts);
+router.delete('/:id', auth, CarsController.deleteProducts);
 
 module.exports = router;

@@ -1,6 +1,8 @@
 const User = require('../models/Users');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const Buy = require('../models/Buy');
+const Sell = require('../models/Sell');
 
 const UserController = {
     async register(req, res){
@@ -83,6 +85,28 @@ const UserController = {
             console.error(error);
             res.status(500).send({message: 'Hay algún problema al borrar este usuario'})
         }
+    },
+
+    async Buy(req, res){
+        try{
+            const user = req.user;
+            const newBuy = {id_car, id_buyer: buy.id}
+            const buy = await Buy.create(newBuy);
+            res.send({buy,message:'Compra registrada correctamente'});
+        }catch(error){
+            console.error(error);
+            res.status(500).send({message: 'Hay algún problema al registrar la compra'})
+        }
+    },
+
+    async Sell(req, res){
+        // try{
+        //     const sell = await Sell.create(req.body);
+        //     res.send({sell,message:'Venta efectuada correctamente'});
+        // }catch(error){
+        //     console.error(error);
+        //     res.status(500).send({message: 'Hay algún problema al registrar la venta'})
+        // }
     },
 }
 

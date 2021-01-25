@@ -1,7 +1,7 @@
-const Car = require('../models/Cars');
+const Car = require('../models/Products');
 
 const CarsController = {
-    async newArticles(req, res){
+    async newProducts(req, res){
         try{
             const user = req.user;
             const newCar = {...req.body,id_user: user.id};
@@ -13,7 +13,7 @@ const CarsController = {
         }
     },
 
-    async getCars(req, res){
+    async getProducts(req, res){
         try{
             const cars = await Car.find();
             res.send(cars);
@@ -23,7 +23,7 @@ const CarsController = {
         }
     },
 
-    async updateCars(req, res){
+    async updateProducts(req, res){
         try{
             const car = await Car.findById(req.params.id);
             if(car.id_user === req.user.id){
@@ -33,7 +33,6 @@ const CarsController = {
             }else{
                 return res.send(403).send({message:'No eres el dueño'})            
             }
-            
             res.send({car, message:'Artículo modificado correctamente'})
         }catch(error){
             console.error(error);
@@ -41,7 +40,7 @@ const CarsController = {
         }
     },
 
-    async deleteCars(req, res){
+    async deleteProducts(req, res){
         try{
             const car = await Car.findByIdAndDelete(req.params.id);
             res.json({message:'Artículo eliminado correctamente'})

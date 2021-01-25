@@ -10,4 +10,4 @@ const CarsSchema = new mongoose.Schema({
     createdAt: {type: Date, default: new Date()}
 })
 
-module.exports = mongoose.model('Cars',CarsSchema);
+module.exports = mongoose.model('Products',CarsSchema);

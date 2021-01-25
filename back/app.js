@@ -7,10 +7,8 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const carsRouter = require('./routes/cars');
-const piecesRouter = require('./routes/pieces');
-const buyRouter = require('./routes/buy');
-const sellRouter =require('./routes/sell');
+const productsRouter = require('./routes/cars');
+//const piecesRouter = require('./routes/pieces');
 
 const app = express();
 
@@ -27,10 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 //=====RUTES=====//
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/cars', carsRouter);
-app.use('/pieces', piecesRouter);
-app.use('/buy', buyRouter);
-app.use('/sell', sellRouter);
+app.use('/products', productsRouter);
+//app.use('/pieces', piecesRouter);
 
 //====CORS====//
 app.use((req, res, next) => {
