@@ -1,12 +1,12 @@
-const Car = require('../models/Products');
+const Product = require('../models/Products');
 
-const CarsController = {
+const ProductsController = {
     async newProducts(req, res){
         try{
             const user = req.user;
             const newCar = {...req.body,id_user: user.id};
-            const car = await Car.create(newCar);
-            res.send({car, message:'Artículo subido correctamente'});
+            const product = await Product.create(newCar);
+            res.send({product, message:'Artículo subido correctamente'});
         }catch(error){
             console.error(error);
             res.status(500).send({message: 'Ha habido algún error al subir el artículo'})
@@ -15,8 +15,8 @@ const CarsController = {
 
     async getProducts(req, res){
         try{
-            const cars = await Car.find();
-            res.send(cars);
+            const products = await Product.find();
+            res.send(products);
         }catch(error){
             console.error(error);
             res.status(500).send({message: 'Hay algún problema al sacar todos los artículos'})
@@ -25,15 +25,15 @@ const CarsController = {
 
     async updateProducts(req, res){
         try{
-            const car = await Car.findById(req.params.id);
-            if(car.id_user === req.user.id){
-                const car = await Car.findByIdAndUpdate(req.params.id, req.body,{
+            const product = await Product.findById(req.params.id);
+            if(product.id_user === req.user.id){
+                const product = await Product.findByIdAndUpdate(req.params.id, req.body,{
                     new: true,
                 });
             }else{
                 return res.send(403).send({message:'No eres el dueño'})            
             }
-            res.send({car, message:'Artículo modificado correctamente'})
+            res.send({product, message:'Artículo modificado correctamente'})
         }catch(error){
             console.error(error);
             res.status(500).send({message: 'Hay algún problema al modificar la informacion del articulo'})
@@ -42,7 +42,7 @@ const CarsController = {
 
     async deleteProducts(req, res){
         try{
-            const car = await Car.findByIdAndDelete(req.params.id);
+            const product = await Product.findByIdAndDelete(req.params.id);
             res.json({message:'Artículo eliminado correctamente'})
         }catch(error){
             console.error(error);
@@ -50,13 +50,17 @@ const CarsController = {
         }
     },
 
-    async getCars(req, res){
 
+    //===FILTROS PARA LOS PRODUCTOS===//
+    async getFilter(req, res){
+        try{
+            const products = await Product.find(req.body);           
+            res.send(products);
+        }catch(error){
+            console.error(error);
+            res.status(500).send({message: 'Hay algún problema al sacar todos los artículos'})
+        }
     },
-
-    async getPieces(req, res){
-        
-    }
 }
 
-module.exports = CarsController;
+module.exports = ProductsController;

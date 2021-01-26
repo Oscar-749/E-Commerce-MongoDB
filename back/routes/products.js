@@ -1,11 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const CarsController = require('../controllers/productsController');
+const ProductsController = require('../controllers/productsController');
 const auth = require('../middleware/auth');
 
-router.post('/', auth, CarsController.newProducts);
-router.get('/', CarsController.getProducts);
-router.put('/:id', auth, CarsController.updateProducts);
-router.delete('/:id', auth, CarsController.deleteProducts);
+router.post('/', auth, ProductsController.newProducts);
+router.get('/', ProductsController.getProducts);
+router.put('/:id', auth, ProductsController.updateProducts);
+router.delete('/:id', auth, ProductsController.deleteProducts);
+
+//===RUTAS DE FILTROS===//
+router.get('/products', ProductsController.getFilter);
 
 module.exports = router;
