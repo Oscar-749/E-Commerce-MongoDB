@@ -22,6 +22,16 @@ const ProductsController = {
             res.status(500).send({message: 'Hay algún problema al sacar todos los artículos'})
         }
     },
+    //===FILTROS PARA LOS PRODUCTOS===//
+    async getFilter(req, res){
+        try{
+            const products = await Product.find(req.body);           
+            res.send(products);
+        }catch(error){
+            console.error(error);
+            res.status(500).send({message: 'Hay algún problema al sacar todos los artículos'})
+        }
+    },
 
     async updateProducts(req, res){
         try{
@@ -47,18 +57,6 @@ const ProductsController = {
         }catch(error){
             console.error(error);
             res.status(500).send({message: 'Hay algún problema al borrar este artículo'})
-        }
-    },
-
-
-    //===FILTROS PARA LOS PRODUCTOS===//
-    async getFilter(req, res){
-        try{
-            const products = await Product.find(req.body);           
-            res.send(products);
-        }catch(error){
-            console.error(error);
-            res.status(500).send({message: 'Hay algún problema al sacar todos los artículos'})
         }
     },
 }
