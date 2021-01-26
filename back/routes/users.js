@@ -9,10 +9,8 @@ router.get('/:email', UserController.getByEmail);
 router.put('/:id', UserController.update);
 router.delete('/:id', UserController.delete);
 
+//===RUTAS DE REGISTRO DE COMPRAS Y VENTAS===//
 router.post('/compra', UserController.Buy);
 router.post('/venta', UserController.Sell);
-
-//router.get('/:id/cars/buyed', UserController.);
-//router.get('/:id/cars/selled', UserController.);
 
 module.exports = router;

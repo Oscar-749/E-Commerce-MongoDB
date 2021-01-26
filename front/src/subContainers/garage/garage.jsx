@@ -1,6 +1,6 @@
 import React from 'react';
 import './garage.css';
-//import {NavLink} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Garage = () => {
@@ -17,6 +17,10 @@ const Garage = () => {
 
                 <div className="comprados">
                     <h6>Comprados</h6>
+                </div>
+
+                <div className="upload-file">
+                    <NavLink className="btn btn-primary" to="/upload">AÑADIR</NavLink>                
                 </div>
             </div>
         </div>

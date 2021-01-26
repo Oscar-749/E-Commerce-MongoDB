@@ -14,6 +14,7 @@ import Pieces from './subContainers/pieces/pieces';
 import Garage from './subContainers/garage/garage';
 import detailsCars from './subContainers/cars/detailsCars/detailsCars';
 import detailsPieces from './subContainers/pieces/detailsPieces/detailsPieces';
+import upload from './subContainers/garage/upload/upload';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -42,6 +43,7 @@ function App() {
         <Route path="/garage" component={Garage} exact/>
         <Route path="/detailscars" component={detailsCars} exact/>
         <Route path="/detailspieces" component={detailsPieces} exact/>
+        <Route path="/upload" component={upload} exact/>
       </Switch>
     </BrowserRouter>
   );

@@ -3,7 +3,7 @@ import './cars.css';
 import {NavLink} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Cars = () => {
+const Cars = (props) => {
     return(
         <div>
             <div className="main-cars">

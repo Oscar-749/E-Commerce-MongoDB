@@ -1,0 +1,18 @@
+form.upload-file {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 70vh;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.upload-file input {
+    all: unset;
+    padding: 1em;
+    padding-top: 1px;
+    width: fit-content;
+    border-radius: 1em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
