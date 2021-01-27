@@ -97,29 +97,33 @@ const UserController = {
         }
     },
 
+    profile(req,res){
+        res.send(req.user)
+    },
+
     //===REGISTRO DE LAS COMPRAS Y VENTAS===//
     async Buy(req, res){
-        try{
-            const user = req.user;
-            const newBuy = {id_product, id_buyer: user.id}
-            const buy = await Buy.create(newBuy);
-            res.send({buy,message:'Compra registrada correctamente'});
-        }catch(error){
-            console.error(error);
-            res.status(500).send({message: 'Hay algún problema al registrar la compra'})
-        }
+        // try{
+        //     const user = req.user;
+        //     const newBuy = {id_product, id_buyer: user.id}
+        //     const buy = await Buy.create(newBuy);
+        //     res.send({buy,message:'Compra registrada correctamente'});
+        // }catch(error){
+        //     console.error(error);
+        //     res.status(500).send({message: 'Hay algún problema al registrar la compra'})
+        // }
     },
 
     async Sell(req, res){
-        try{
-            const user = req.user;
-            const newSell = {id_product, id_seller: user.id}
-            const sell = await Sell.create(req.body);
-            res.send({sell,message:'Venta registrada correctamente'});
-        }catch(error){
-            console.error(error);
-            res.status(500).send({message: 'Hay algún problema al registrar la venta'})
-        }
+        // try{
+        //     const user = req.user;
+        //     const newSell = {id_product, id_seller: user.id}
+        //     const sell = await Sell.create(req.body);
+        //     res.send({sell,message:'Venta registrada correctamente'});
+        // }catch(error){
+        //     console.error(error);
+        //     res.status(500).send({message: 'Hay algún problema al registrar la venta'})
+        // }
     },
 }
 

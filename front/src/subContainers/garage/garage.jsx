@@ -7,10 +7,6 @@ const Garage = () => {
     return(
         <div>
             <div className="main-garage">
-                <div className="info">
-
-                </div>
-
                 <div className="en-venta">
                     <h6>En Venta</h6>
                 </div>

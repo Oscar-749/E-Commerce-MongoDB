@@ -17,13 +17,13 @@ import DetailsProducts from './subContainers/detailCar/detailCar';
 function App() {
   const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    if(token){
-      axios.get('',{headers:{Authorization:token}})
-      .then(res => setUser(res.data))
-    }
-  }, [])
+  // useEffect(() => {
+  //   const token = localStorage.getItem('token');
+  //   if(token){
+  //     axios.get('http://localhost:3001/users/profile',{headers:{Authorization:token}})
+  //     .then(res => setUser(res.data))
+  //   }
+  // }, [])
 
   return (
     <BrowserRouter>
