@@ -16,15 +16,14 @@ const Header = (props) => {
                 <div className="user">
                     {props.user ?
                         <>
+                        <NavLink to="/garage">Garaje</NavLink>
                         <span>{props.user?.username}</span>
                         <NavLink to="/profile">Perfil</NavLink>
                         <NavLink to="/">
                             <span onClick={logout}>Cerrar Sesión</span>
                         </NavLink>
-                            
                         </> :
                         <>
-                        
                         </>
                     }
                 </div>

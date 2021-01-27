@@ -5,10 +5,10 @@ const auth = require('../middleware/auth');
 
 router.post('/', auth, ProductsController.newProducts);
 router.get('/', ProductsController.getProducts);
-router.put('/:id', auth, ProductsController.updateProducts);
+router.put('/:id', ProductsController.updateProducts);
 router.delete('/:id', auth, ProductsController.deleteProducts);
 
 //===RUTAS DE FILTROS===//
-router.get('/products', ProductsController.getFilter);
+router.get('/filter', ProductsController.getFilter);
 
 module.exports = router;

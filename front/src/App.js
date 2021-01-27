@@ -9,11 +9,9 @@ import Home from './containers/home/home';
 import Register from './containers/register/register';
 import Login from './containers/login/login';
 import Profile from './containers/profile/profile';
-import Cars from './subContainers/cars/cars';
-import Pieces from './subContainers/pieces/pieces';
+import Products from './subContainers/products/products';
+import Piece from './subContainers/pieces/pieces';
 import Garage from './subContainers/garage/garage';
-import detailsCars from './subContainers/cars/detailsCars/detailsCars';
-import detailsPieces from './subContainers/pieces/detailsPieces/detailsPieces';
 import upload from './subContainers/garage/upload/upload';
 
 function App() {
@@ -28,7 +26,6 @@ function App() {
   }, [])
 
   return (
-    
     <BrowserRouter>
       <Header user ={user} setUser={setUser}/>
 
@@ -38,12 +35,10 @@ function App() {
         <Route path="/profile" component={Profile} exact/>
         <Route path="/login" children={<Login user={user} setUser={setUser}/>} exact/>
         <Route path="/home" component={Home} exact/>
-        <Route path="/cars" component={Cars} exact/>
-        <Route path="/pieces" component={Pieces} exact/>
-        <Route path="/garage" component={Garage} exact/>
-        <Route path="/detailscars" component={detailsCars} exact/>
-        <Route path="/detailspieces" component={detailsPieces} exact/>
+        <Route path="/cars" render={(props)=><Products productsType="coche"></Products>} exact/>
+        <Route path="/pieces" render={(props)=><Products productsType="pieza"></Products>} exact/>
         <Route path="/upload" component={upload} exact/>
+        <Route path="/garage" component={Garage} exact/>
       </Switch>
     </BrowserRouter>
   );

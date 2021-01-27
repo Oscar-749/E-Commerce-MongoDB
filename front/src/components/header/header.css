@@ -4,6 +4,7 @@
     justify-content: space-between;
     background-color: rgb(253, 0, 0);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* all: unset; */
 }
 
 /* .active {

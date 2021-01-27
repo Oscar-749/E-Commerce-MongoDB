@@ -25,8 +25,11 @@ const ProductsController = {
     //===FILTROS PARA LOS PRODUCTOS===//
     async getFilter(req, res){
         try{
-            const products = await Product.find(req.body);           
+            const filter = req.query.product ||'coche';
+            console.log(filter);
+            const products = await Product.find().where({product:filter});           
             res.send(products);
+            console.log(products);
         }catch(error){
             console.error(error);
             res.status(500).send({message: 'Hay algún problema al sacar todos los artículos'})
@@ -35,14 +38,14 @@ const ProductsController = {
 
     async updateProducts(req, res){
         try{
-            const product = await Product.findById(req.params.id);
-            if(product.id_user === req.user.id){
+            //const product = await Product.findById(req.params.id);
+            //if(product.id_user === req.user.id){
                 const product = await Product.findByIdAndUpdate(req.params.id, req.body,{
                     new: true,
                 });
-            }else{
-                return res.send(403).send({message:'No eres el dueño'})            
-            }
+            //}else{
+            //     return res.send(403).send({message:'No eres el dueño'})            
+            //}
             res.send({product, message:'Artículo modificado correctamente'})
         }catch(error){
             console.error(error);
