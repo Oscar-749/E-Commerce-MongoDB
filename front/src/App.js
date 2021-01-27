@@ -9,10 +9,10 @@ import Home from './containers/home/home';
 import Register from './containers/register/register';
 import Login from './containers/login/login';
 import Profile from './containers/profile/profile';
-import Products from './subContainers/products/products';
-import Piece from './subContainers/pieces/pieces';
 import Garage from './subContainers/garage/garage';
 import upload from './subContainers/garage/upload/upload';
+import Products from './subContainers/products/products';
+import DetailsProducts from './subContainers/detailCar/detailCar';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -35,10 +35,13 @@ function App() {
         <Route path="/profile" component={Profile} exact/>
         <Route path="/login" children={<Login user={user} setUser={setUser}/>} exact/>
         <Route path="/home" component={Home} exact/>
-        <Route path="/cars" render={(props)=><Products productsType="coche"></Products>} exact/>
-        <Route path="/pieces" render={(props)=><Products productsType="pieza"></Products>} exact/>
         <Route path="/upload" component={upload} exact/>
         <Route path="/garage" component={Garage} exact/>
+        
+        <Route path="/cars" render={(props)=><Products productsType="coche"></Products>} exact/>
+        <Route path="/pieces" render={(props)=><Products productsType="pieza"></Products>} exact/>
+        <Route path="/detailcar" render={(props)=><DetailsProducts detailsType="coche"></DetailsProducts>} exact/>
+        <Route path="/detailpiece" render={(props)=><DetailsProducts detailsType="pieza"></DetailsProducts>} exact/>
       </Switch>
     </BrowserRouter>
   );

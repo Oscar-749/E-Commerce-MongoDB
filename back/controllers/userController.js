@@ -52,6 +52,16 @@ const UserController = {
         }
     },
 
+    async getById(req, res) {
+        try {
+          const user = await User.findById(req.params.id);
+          res.send(user);
+        } catch (error) {
+          console.log(error);
+          res.status(500).send({ message: "Hay algun problema al encontrar el user por id" });
+        }
+      },
+
     async getByEmail(req, res){
         try{
             const user = await User.findOne({email:req.params.email});

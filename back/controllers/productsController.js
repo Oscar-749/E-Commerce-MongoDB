@@ -22,14 +22,23 @@ const ProductsController = {
             res.status(500).send({message: 'Hay algún problema al sacar todos los artículos'})
         }
     },
+
+    async getById(req, res){
+        try{
+            const product = await Product.findById(req.params.id);
+            res.send(product);
+        }catch(error){
+            console.error(error);
+            res.status(500).send({message: 'Hay algún problema al sacar el artículo por id'})
+        }
+    },
+
     //===FILTROS PARA LOS PRODUCTOS===//
     async getFilter(req, res){
         try{
             const filter = req.query.product ||'coche';
-            console.log(filter);
             const products = await Product.find().where({product:filter});           
             res.send(products);
-            console.log(products);
         }catch(error){
             console.error(error);
             res.status(500).send({message: 'Hay algún problema al sacar todos los artículos'})
