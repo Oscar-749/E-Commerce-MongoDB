@@ -2,7 +2,7 @@ import React from 'react';
 import './register.css';
 import axios from 'axios';
 import {useHistory} from 'react-router-dom';
-//import {notification} from 'bootstrap-icons';
+//import {notification} from 'antd';
 
 const Register = () => {
     const history = useHistory();

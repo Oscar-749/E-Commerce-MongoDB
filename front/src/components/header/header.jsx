@@ -10,7 +10,7 @@ const Header = (props) => {
 
     return(
         <header className="header">
-             <NavLink to="/home">CarWeb</NavLink>
+             <NavLink to="/home">WebCar</NavLink>
 
             <div className="user">
                 <div className="user">

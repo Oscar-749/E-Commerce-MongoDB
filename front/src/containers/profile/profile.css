@@ -1,9 +1,11 @@
-.form.profile {
+.profile {
     padding: 2em;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    min-height: 70vh;
+    justify-content: space-between;
+    min-height: 80vh;
     align-items: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 50%;
+    margin-left: 20em;
 }

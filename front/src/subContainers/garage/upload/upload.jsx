@@ -2,9 +2,9 @@ import React from 'react';
 import './upload.css';
 import axios from 'axios';
 import {useHistory} from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import {notification} from 'antd';
 
-const Upload = () => {
+const Upload = (props) => {
     const history = useHistory();
     const handleSubmit = async (event) => {
         try{
@@ -14,28 +14,27 @@ const Upload = () => {
                 name: form.name.value,
                 price: form.price.value,
                 text: form.text.value,
-                //product: form.product.value,
+                product: form.product.value,
             }
-            await axios.post('http://localhost:3000/products', article)
+            const res = await axios.post('http://localhost:3000/products', article)
+            localStorage.setItem('token', res.data.token)
+            //notification.success({message:'Artículo subido correctamente'})
+            props.setItem(res.data.product)
             history.push('/garage')
-            console.log(article);
-
+            console.log(form);
         }catch(error){
-            console.log(error)
-            // res.send({message: 'El articulo no se ha podido subir'})
+            console.log(error);
         }
     }
-
     return(
        <form className="upload-file" onSubmit= {handleSubmit}>
         <h1>Subir Artículo</h1>
             <input type = "text" class="form-control" name= "name" placeholder="Nombre"/>
-            <input type = "number" class="form-control" name= "price" placeholder="Precio"/>
+            <input type = "text" class="form-control" name= "price" placeholder="Precio"/>
             <input type = "text" class="form-control" name= "text" placeholder="Descripción"/>
-            <input type = "text" class="form-control" name= "text" placeholder="Coche o Pieza"/>
+            <input type = "text" class="form-control" name= "product" placeholder="Coche o Pieza"/>
 
             <button type="submit" class="btn btn-primary">Subir</button>
-            {/* <NavLink to="/garage" class="btn btn-primary">Subir</NavLink> */}
         </form>
     )
 }

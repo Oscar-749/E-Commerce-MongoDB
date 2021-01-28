@@ -2,6 +2,7 @@ import React from 'react';
 import './profile.css';
 import axios from 'axios';
 import {useHistory} from 'react-router-dom';
+//import {notification} from 'antd';
 
 const Profile = () => {
     const history = useHistory();
@@ -16,31 +17,30 @@ const Profile = () => {
                 email: form.email.value,
                 password: form.password.value,
             }
-            await axios.post('http://localhost:3000/users/update/:id', user)
-            //notification.success({message:'Usuario registrado correctamente'})
+            await axios.put('http://localhost:3000/users/update/:id', user)
+            //notification.success({message:'Usuario modificado correctamente'})
             history.push('/home')
         }catch(error){
             console.log(error)
-            //notification.error({message: 'Error al registrarte'})
+            //notification.error({message: 'Error al modificar el usuario'})
         }
     }
 
     return(
        <form className="profile" onSubmit= {handleSubmit}>
-        <h1>Perfil</h1>
+            <h1>Perfil</h1>
             <input type = "text" class="form-control" name= "name" placeholder="Nombre"/>
-            <br></br>
             <input type = "text" class="form-control" name= "surname" placeholder="Apellido"/>
-            <br></br>
             <input type = "text" class="form-control" name= "username" placeholder="Nombre usuario"/>
-            <br></br>
             <input type = "email" class="form-control" name= "email" placeholder="Correo electrónico"/>
-            <br></br>
             <input type = "password" class="form-control" name= "password" placeholder="Contraseña"/>
-            <br></br>
             <button type="submit" class="btn btn-primary">Guardar</button>
-            <button type="submit" class="btn btn-primary">Eliminar cuenta</button>
+        
+            <form className="delete">
+                <button type="submit" class="btn btn-danger">Eliminar cuenta</button>
+            </form>
         </form>
+
     )
 }
 
