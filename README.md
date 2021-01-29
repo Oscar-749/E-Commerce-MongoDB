@@ -22,7 +22,23 @@ En el front tienes la capacidad de gstionar tu propio usuario y tus productos, p
 # TECNOLOGÍAS
   - React
   - Redux
+  - JavaScript
+  - React-Bootstrap
+  - Axios
   
-  # VISTAS DEL FRONTEND
+# VISTAS DEL FRONTEND
+No podras acceder a la web hasta que no estes registrado y logueado
   # Registro
+  ![Registro](https://user-images.githubusercontent.com/65704344/106329764-51a57300-6282-11eb-847b-2c8b8e15f724.jpg)
+
+  #Loguin
+  ![Loguin](https://user-images.githubusercontent.com/65704344/106329814-67b33380-6282-11eb-8ed9-c80677f00f7d.jpg)
+
+  # Home
+  ![Home](https://user-images.githubusercontent.com/65704344/106329789-5bc77180-6282-11eb-84b9-cbf1b37f62f5.jpg)
+
+  # Perfil
+  ![Perfil](https://user-images.githubusercontent.com/65704344/106329798-5f5af880-6282-11eb-8383-c1cbf8da63f5.png) 
   
+  # Autor:
+    Oscar Soler Benlloch
