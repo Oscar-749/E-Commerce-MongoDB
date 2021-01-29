@@ -10,6 +10,7 @@ const Profile = () => {
         try{
             event.preventDefault();
             const form = event.target;
+            const userStorage = JSON.parse(localStorage.getItem('user'));
             const user = {
                 name: form.name.value,
                 surname: form.surname.value,
@@ -17,7 +18,7 @@ const Profile = () => {
                 email: form.email.value,
                 password: form.password.value,
             }
-            await axios.put('http://localhost:3000/users/update/:id', user)
+            await axios.put('http://localhost:3000/users/' + userStorage._id, user)
             //notification.success({message:'Usuario modificado correctamente'})
             history.push('/home')
         }catch(error){

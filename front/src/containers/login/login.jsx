@@ -12,8 +12,10 @@ const Login = (props) => {
     const handleSubmit = async (event) => {
         try{
             event.preventDefault();
-            const res = await axios.post('http://localhost:3000/users/login', {email, password})
-            localStorage.setItem('token', res.data.token)
+            const res = await axios.post('http://localhost:3000/users/login', {email, password});
+            console.log(res);
+            localStorage.setItem('token', res.data.token);
+            localStorage.setItem('user', JSON.stringify(res.data.user));
             //notification.success({message:'Has iniciado sesión correctamente'})
             props.setUser(res.data.user)
             history.push('/home')

@@ -10,18 +10,19 @@ const Upload = (props) => {
         try{
             event.preventDefault();
             const form = event.target;
+            const token = localStorage.getItem('token');
+            const config = {
+                headers: { Authorization: token}
+            };
             const article = {
                 name: form.name.value,
                 price: form.price.value,
                 text: form.text.value,
                 product: form.product.value,
             }
-            const res = await axios.post('http://localhost:3000/products', article)
-            localStorage.setItem('token', res.data.token)
+            const res = await axios.post('http://localhost:3000/products', article, config)
             //notification.success({message:'Artículo subido correctamente'})
-            props.setItem(res.data.product)
             history.push('/garage')
-            console.log(form);
         }catch(error){
             console.log(error);
         }

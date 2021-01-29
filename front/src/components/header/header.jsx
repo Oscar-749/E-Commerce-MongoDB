@@ -5,6 +5,7 @@ import './header.css';
 const Header = (props) => {
     const logout = () => {
         localStorage.removeItem('token')
+        localStorage.removeItem('user')
         props.setUser(null)
     }
 

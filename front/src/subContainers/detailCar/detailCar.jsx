@@ -1,7 +1,7 @@
 import React from 'react';
 import './detailCar.css'
 
-const DetailCar = () => {
+const DetailCar = ({detailCar}) => {
     return(
         <div className="main-details-cars">
             {/* <h6>{detailCar.name}</h6>
