@@ -1,5 +1,6 @@
 # E-Commerce-MongoDB
 
+# BACKEND
 Este proyecto es una web dedicada a las personas aficionadas al mundo de los coches o simplemente quiere encontrar su coche deseado o simplemente un recambio para su coche.
 Esta web se compone de un backend capaz de controlar la gestion de un usuario(registrar, loguear, busqueda por id, busqueda por email, actualización de perfil y eliminar) y la gestion de los productos(subir un producto, buscar por id, buscar por un filtro de seleccion de coche o pieza).
 
@@ -11,4 +12,17 @@ Esta web se compone de un backend capaz de controlar la gestion de un usuario(re
 # BASE DE DATOS
   # Tablas
   ![Tabla](https://user-images.githubusercontent.com/65704344/106328904-dc856e00-6280-11eb-8020-81e07a208a80.jpg)
+  
+  # DB
+  ![DB](https://user-images.githubusercontent.com/65704344/106329209-5a497980-6281-11eb-9838-335d43623e6c.jpg)
 
+# FRONTEND
+En el front tienes la capacidad de gstionar tu propio usuario y tus productos, pudiendo registrarte, iniciar sesion, modifcar tus datos personales o eliminar la cuenta. Y en el tema de los productos podras ver todos los productos subidos por el resto de usuarios, ver en detalle las caracteristicas de los articulos y contactar con el dueño para habalar sobre ese producto.
+
+# TECNOLOGÍAS
+  - React
+  - Redux
+  
+  # VISTAS DEL FRONTEND
+  # Registro
+  
