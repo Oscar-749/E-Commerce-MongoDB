@@ -10,4 +10,5 @@ Esta web se compone de un backend capaz de controlar la gestion de un usuario(re
   
 # BASE DE DATOS
   # Tablas
-  
+  ![Tabla](https://user-images.githubusercontent.com/65704344/106328904-dc856e00-6280-11eb-8020-81e07a208a80.jpg)
+
