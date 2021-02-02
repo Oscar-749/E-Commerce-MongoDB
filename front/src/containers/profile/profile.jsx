@@ -20,7 +20,7 @@ const Profile = () => {
             }
             await axios.put('http://localhost:3000/users/' + userStorage._id, user)
             //notification.success({message:'Usuario modificado correctamente'})
-            history.push('/home')
+            history.push('/')
         }catch(error){
             console.log(error)
             //notification.error({message: 'Error al modificar el usuario'})

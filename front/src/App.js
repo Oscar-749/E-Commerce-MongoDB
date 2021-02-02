@@ -9,7 +9,6 @@ import Register from './containers/register/register';
 import Login from './containers/login/login';
 import Profile from './containers/profile/profile';
 import Garage from './subContainers/garage/garage';
-import upload from './subContainers/garage/upload/upload';
 import Products from './subContainers/products/products';
 import Upload from './subContainers/garage/upload/upload';
 
@@ -19,7 +18,7 @@ function App() {
   useEffect(() => {
     const token = localStorage.getItem('token');
     if(token){
-      axios.get('http://localhost:3001/',{headers:{Authorization:token}})
+      axios.get('',{headers:{Authorization:token}})
       .then(res => setUser(res.data))
     }
   }, [])
