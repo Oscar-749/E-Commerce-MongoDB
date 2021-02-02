@@ -18,14 +18,19 @@ const Header = (props) => {
                     {props.user ?
                         <>
                         <NavLink to="/garage">Garaje</NavLink>
-                        <span>{props.user?.username}</span>
-                        <NavLink to="/profile">Perfil</NavLink>
+
+                        <NavLink to="/profile">
+                            <span>{props.user?.username}</span>
+                        </NavLink>
+
                         <NavLink to="/">
                             <span onClick={logout}>Cerrar Sesión</span>
                         </NavLink>
                         </> :
+
                         <>
                         <NavLink to="/login">Iniciar Sesión</NavLink>
+                        
                         <NavLink to="/register">Registro</NavLink>
                         </>
                     }

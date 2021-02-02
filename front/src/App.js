@@ -11,29 +11,30 @@ import Profile from './containers/profile/profile';
 import Garage from './subContainers/garage/garage';
 import upload from './subContainers/garage/upload/upload';
 import Products from './subContainers/products/products';
+import Upload from './subContainers/garage/upload/upload';
 
 function App() {
   const [user, setUser] = useState(null);
 
-  // useEffect(() => {
-  //   const token = localStorage.getItem('token');
-  //   if(token){
-  //     axios.get('http://localhost:3001/users/profile',{headers:{Authorization:token}})
-  //     .then(res => setUser(res.data))
-  //   }
-  // }, [])
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if(token){
+      axios.get('http://localhost:3001/',{headers:{Authorization:token}})
+      .then(res => setUser(res.data))
+    }
+  }, [])
 
   return (
     <BrowserRouter>
       <Header user ={user} setUser={setUser}/>
 
       <Switch>
-        <Route path="/" component={Home} exact/>
-        <Route path="/register" component={Register} exact/>
-        <Route path="/profile" component={Profile} exact/>
+        <Route path="/" children={<Home user={user} setUser={setUser}/>} exact/>
+        <Route path="/register" children={<Register user={user} setUser={setUser}/>} exact/>
+        <Route path="/profile" children={<Profile user={user} setUser={setUser}/>} exact/>
         <Route path="/login" children={<Login user={user} setUser={setUser}/>} exact/>
-        <Route path="/upload" component={upload} exact/>
-        <Route path="/garage" component={Garage} exact/>
+        <Route path="/upload" children={<Upload user={user} setUser={setUser}/>} exact/>
+        <Route path="/garage" children={<Garage user={user} setUser={setUser}/>} exact/>
         
         <Route path="/cars" render={(props)=><Products productsType="coche"></Products>} exact/>
         <Route path="/pieces" render={(props)=><Products productsType="pieza"></Products>} exact/>
