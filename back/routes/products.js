@@ -4,12 +4,13 @@ const ProductsController = require('../controllers/productsController');
 const auth = require('../middleware/auth');
 
 router.post('/', auth, ProductsController.newProducts);
+//===GET===//
 router.get('/', ProductsController.getProducts);
-router.get('product/:id', ProductsController.getById);
-router.put('/:id', ProductsController.updateProducts);
+router.get('getId/:id', ProductsController.getById);
+router.get('/filter', ProductsController.getFilter);
+
+router.put('/:id', auth, ProductsController.updateProducts);
 router.delete('/:id', auth, ProductsController.deleteProducts);
 
-//===RUTAS DE FILTROS===//
-router.get('/filter', ProductsController.getFilter);
 
 module.exports = router;

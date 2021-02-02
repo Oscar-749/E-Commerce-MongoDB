@@ -1,7 +1,7 @@
 import React from 'react';
 import './login.css';
 import {useState} from 'react';
-import {useHistory} from 'react-router-dom';
+import {NavLink, useHistory} from 'react-router-dom';
 import axios from 'axios';
 //import {notification} from 'antd';
 
@@ -18,7 +18,7 @@ const Login = (props) => {
             localStorage.setItem('user', JSON.stringify(res.data.user));
             //notification.success({message:'Has iniciado sesión correctamente'})
             props.setUser(res.data.user)
-            history.push('/home')
+            history.push('/')
         }catch(error){
             console.log(error)
             //notification.error({message: 'Error al iniciar sesión'})
@@ -31,6 +31,8 @@ const Login = (props) => {
             <input type="email" class="form-control" onChange={event=>setEmail(event.target.value)} name="email" placeholder="Correo electrónico"/>
             <input type="password" class="form-control" onChange={event=>setPassword(event.target.value)} name="password" placeholder="Contraseña"/>
             <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+        
+        <NavLink to="/register">¿Aún no te has registrado?</NavLink>
         </form>
     )
 }

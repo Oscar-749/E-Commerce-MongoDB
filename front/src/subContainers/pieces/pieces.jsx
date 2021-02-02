@@ -11,7 +11,7 @@ const Piece = ({piece}) => {
                 <div className="img-pieces">
                     <h6>{piece.name}</h6>
                     <p>{piece.price}</p>
-                    <NavLink to="/detailpiece" className="btn btn-primary">Detalles</NavLink>
+                    <NavLink to="/pieces" className="btn btn-primary">Detalles</NavLink>
                 </div>
                 
             </div>

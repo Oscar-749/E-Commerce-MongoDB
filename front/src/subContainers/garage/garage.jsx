@@ -4,6 +4,9 @@ import {NavLink} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Garage = () => {
+    
+
+
     return(
         <div>
             <div className="main-garage">

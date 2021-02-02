@@ -53,7 +53,7 @@ const ProductsController = {
                     new: true,
                 });
             //}else{
-            //     return res.send(403).send({message:'No eres el dueño'})            
+                //return res.send(403).send({message:'No eres el dueño'})            
             //}
             res.send({product, message:'Artículo modificado correctamente'})
         }catch(error){

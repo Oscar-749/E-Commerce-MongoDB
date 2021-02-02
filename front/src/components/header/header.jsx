@@ -11,7 +11,7 @@ const Header = (props) => {
 
     return(
         <header className="header">
-             <NavLink to="/home">WebCar</NavLink>
+             <NavLink to="/">WebCar</NavLink>
 
             <div className="user">
                 <div className="user">
@@ -25,6 +25,8 @@ const Header = (props) => {
                         </NavLink>
                         </> :
                         <>
+                        <NavLink to="/login">Iniciar Sesión</NavLink>
+                        <NavLink to="/register">Registro</NavLink>
                         </>
                     }
                 </div>
