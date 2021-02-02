@@ -40,5 +40,13 @@ No podras acceder a la web hasta que no estes registrado y logueado
   # Perfil
   ![Perfil](https://user-images.githubusercontent.com/65704344/106329798-5f5af880-6282-11eb-8383-c1cbf8da63f5.png) 
   
+# FUNCIONAMIENTO
+  - Vamos a la carpeta back "cd back"
+  - Hacemos un npm install
+  - Vamos a la carpeta front "cd front"
+  - Hacemos un npm install
+  - Cuando ya se hayan instalado las librerias hacemos npm start en la carpeta back y front
+  - Automaticamente el back se encedera en el puerto 3000 y react lo pasara al 3001
+  
   # Autor:
     Oscar Soler Benlloch
