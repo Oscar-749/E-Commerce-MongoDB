@@ -1,5 +1,6 @@
 import React from 'react';
 import './cars.css';
+import {NavLink} from 'react-router-dom';
 
 const Car = ({car}) => {
     
@@ -10,7 +11,7 @@ const Car = ({car}) => {
                 <div className="img-cars">
                     <h6>{car.name}</h6>
                     <p>{car.price}</p>
-                    <button onClick="" className="btn btn-primary">Detalles</button>          
+                    <NavLink to="/detailcar" className="btn btn-primary">Detalles</NavLink>          
                 </div>
             </div>
         </div>

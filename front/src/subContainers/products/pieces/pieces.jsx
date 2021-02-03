@@ -1,6 +1,7 @@
 import React from 'react';
 import './pieces.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import {NavLink} from 'react-router-dom';
+
 
 const Piece = ({piece}) => {
     return(
@@ -10,7 +11,7 @@ const Piece = ({piece}) => {
                 <div className="img-pieces">
                     <h6>{piece.name}</h6>
                     <p>{piece.price}</p>
-                    <button onClick="" className="btn btn-primary">Detalles</button>
+                    <NavLink to="/detailcar" className="btn btn-primary">Detalles</NavLink>          
                 </div>
                 
             </div>

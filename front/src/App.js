@@ -11,6 +11,7 @@ import Profile from './containers/profile/profile';
 import Garage from './subContainers/garage/garage';
 import Products from './subContainers/products/products';
 import Upload from './subContainers/garage/upload/upload';
+import DetailProduct from './subContainers/products/detailProduct/detailProduct';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -34,6 +35,7 @@ function App() {
         <Route path="/login" children={<Login user={user} setUser={setUser}/>} exact/>
         <Route path="/upload" children={<Upload user={user} setUser={setUser}/>} exact/>
         <Route path="/garage" children={<Garage user={user} setUser={setUser}/>} exact/>
+        <Route path="/detailcar" component={DetailProduct} exact/>
         
         <Route path="/cars" render={(props)=><Products productsType="coche"></Products>} exact/>
         <Route path="/pieces" render={(props)=><Products productsType="pieza"></Products>} exact/>
