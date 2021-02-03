@@ -33,7 +33,10 @@ const Upload = (props) => {
             <input type = "text" class="form-control" name= "name" placeholder="Nombre"/>
             <input type = "text" class="form-control" name= "price" placeholder="Precio"/>
             <input type = "text" class="form-control" name= "text" placeholder="Descripción"/>
-            <input type = "text" class="form-control" name= "product" placeholder="Coche o Pieza"/>
+            <select name="">
+                <option>coche</option>
+                <option>pieza</option>
+            </select>
 
             <button type="submit" class="btn btn-primary">Subir</button>
         </form>

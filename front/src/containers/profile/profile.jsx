@@ -20,7 +20,7 @@ const Profile = () => {
             }
             await axios.put('http://localhost:3000/users/' + userStorage._id, user)
             //notification.success({message:'Usuario modificado correctamente'})
-            history.push('/')
+            history.push('/home')
         }catch(error){
             console.log(error)
             //notification.error({message: 'Error al modificar el usuario'})
@@ -37,9 +37,9 @@ const Profile = () => {
             <input type = "password" class="form-control" name= "password" placeholder="Contraseña"/>
             <button type="submit" class="btn btn-primary">Guardar</button>
         
-            <form className="delete">
-                <button type="submit" class="btn btn-danger">Eliminar cuenta</button>
-            </form>
+            {/* <form className="delete">
+                <button type="submit" to="/home" class="btn btn-danger">Eliminar cuenta</button>
+            </form> */}
         </form>
 
     )
