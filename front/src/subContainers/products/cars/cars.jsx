@@ -1,6 +1,5 @@
 import React from 'react';
 import './cars.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Car = ({car}) => {
     

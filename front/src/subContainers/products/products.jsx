@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import './products.css';
 import axios from 'axios';
-import Piece from '../pieces/pieces';
-import Car from '../cars/cars';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Piece from './pieces/pieces';
+import Car from './cars/cars';
 
 const Products = (props) => {
     const productsType =props.productsType || 'coche';
