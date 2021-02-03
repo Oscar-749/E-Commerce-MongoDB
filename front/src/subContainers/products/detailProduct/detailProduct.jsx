@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './detailProduct.css';
+import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const DetailCar = () => {
+const DetailCar = (props) => {
     return(
         <div >
             <h1>DETALLES DE LOS COCHES Y PIEZAS</h1>
